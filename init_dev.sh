@@ -27,3 +27,5 @@ fi
 if [ ! -f "$HOME/.py3env/bin/activate" ]; then
 virtualenv -p /usr/bin/python3 ~/.py3env
 fi
+
+source $HOME/.bashrc
