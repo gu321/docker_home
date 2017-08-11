@@ -12,6 +12,7 @@ function home_link {
 
 home_link .hgrc
 home_link .tmux_default
+home_link .bash_profile
 home_link .bashrc
 home_link .hgignore
 home_link .pip
