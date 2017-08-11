@@ -17,6 +17,10 @@ home_link .hgignore
 home_link .pip
 home_link .bash_aliases
 
+cd /tmp
+git clone git://github.com/joelthelion/autojump.git --depth=1
+cd autojump
+./install.py
 
 if [ ! -f "$HOME/.py3env/bin/activate" ]; then
 virtualenv -p /usr/bin/python3 ~/.py3env
