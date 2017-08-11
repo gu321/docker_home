@@ -5,8 +5,8 @@ cd ~
 
 
 function home_link {
-    rm -rf ~/$1
-    ln -s $PREFIX/home/$1 ~
+    rm -rf $HOME/$1
+    ln -s $PREFIX/home/$1 $HOME
 }
 
 
@@ -16,6 +16,6 @@ home_link .bashrc
 home_link .hgignore
 home_link .pip
 
-if [ ! -f "~/.py3env/bin/activate" ]; then
+if [ ! -f "$HOME/.py3env/bin/activate" ]; then
 virtualenv -p /usr/bin/python3 ~/.py3env
 fi
