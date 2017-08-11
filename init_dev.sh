@@ -3,6 +3,11 @@
 PREFIX=`realpath $(cd "$(dirname "$0")"; pwd)`
 cd ~
 
-ln -s $PREFIX/home/.hgrc .
+function copy {
+    rm ~/$1
+    ln -s $PREFIX/home/$1 ~
+}
 
-
+copy .hgrc
+copy .bashrc
+copy .hgignore
