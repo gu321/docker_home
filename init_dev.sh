@@ -3,7 +3,9 @@
 PREFIX=`realpath $(cd "$(dirname "$0")"; pwd)`
 cd ~
 
-virtualenv -p /usr/bin/python3.6 ~/.py3env
+if [ ! -f "~/.py3env/bin/activate" ]; then
+virtualenv -p /usr/bin/python3 ~/.py3env
+fi
 
 function copy {
     rm ~/$1
