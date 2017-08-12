@@ -4,19 +4,20 @@ PREFIX=`realpath $(cd "$(dirname "$0")"; pwd)`/..
 cd ~
 
 
-function home_link {
+function init {
     rm -rf $HOME/$1
-    ln -s $PREFIX/home/$1 $HOME
+    #ln -s $PREFIX/home/$1 $HOME
+    cp $PREFIX/home/$1 $HOME
 }
 
 
-home_link .hgrc
-home_link .tmux_default
-home_link .bash_profile
-home_link .bashrc
-home_link .hgignore
-home_link .pip
-home_link .bash_aliases
+init .hgrc
+init .tmux_default
+init .bash_profile
+init .bashrc
+init .hgignore
+init .pip
+init .bash_aliases
 
 if [ ! -f "$HOME/.autojump/etc/profile.d/autojump.sh" ]; then
 cd /tmp
