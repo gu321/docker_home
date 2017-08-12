@@ -7,7 +7,7 @@ cd ~
 function init {
     rm -rf $HOME/$1
     #ln -s $PREFIX/home/$1 $HOME
-    cp $PREFIX/home/$1 $HOME
+    cp -r $PREFIX/home/$1 $HOME
 }
 
 
