@@ -6,6 +6,7 @@ if [ -z $cmd ]; then
     exit 1
 fi
 
+
 $cmd has -t $session 2> /dev/null
 $cmd set -g default-terminal "screen-256color"
 $cmd set -g status-fg colour238
