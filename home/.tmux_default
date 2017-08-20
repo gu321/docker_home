@@ -8,9 +8,6 @@ fi
 
 
 $cmd has -t $session 2> /dev/null
-$cmd set -g default-terminal "screen-256color"
-$cmd set -g status-fg colour238
-$cmd set -g status-bg black
 
 if [ $? != 0 ]; then
     $cmd new -d -n py -s $session "cd ~/;bash"
