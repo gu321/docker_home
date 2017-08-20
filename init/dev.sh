@@ -13,6 +13,7 @@ function init {
 
 init .hgrc
 init .tmux_default
+init .tmux.conf
 init .bash_profile
 init .bashrc
 init .hgignore
