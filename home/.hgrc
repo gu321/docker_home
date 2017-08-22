@@ -51,7 +51,7 @@ bdiff = diff -r "max(ancestors('$1') and branch(default)):'$1'"
 slog = log --template '{rev}:{node|short} {desc|firstline}\n'
 vimdiff = resolve -t vimdiff $1
 ci = hg commit -m " "
-sync = !hg commit -m " " || hg fetch || hg push
+sync = !hg commit -m " " || hg fetch || hg bookmark -f master || hg push
 
 
 [auth]
