@@ -50,8 +50,8 @@ blame = annotate --user --number
 bdiff = diff -r "max(ancestors('$1') and branch(default)):'$1'"
 slog = log --template '{rev}:{node|short} {desc|firstline}\n'
 vimdiff = resolve -t vimdiff $1
-ci = hg commit -m " "
-sync = !hg commit -m " " ; hg fetch ; hg bookmark -f master ; hg push
+ci = commit -m " "
+sync = !$HG commit -m " " ; $HG fetch ; $HG bookmark -f master ; $HG push
 
 
 [auth]
