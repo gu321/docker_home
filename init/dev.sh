@@ -11,14 +11,15 @@ function init {
 }
 
 
-init .hgrc
-init .tmux_default
-init .tmux.conf
+init .bash_aliases
 init .bash_profile
 init .bashrc
 init .hgignore
+init .hgrc
 init .pip
-init .bash_aliases
+init .tmux.conf
+init .tmux_default
+init .vimrc
 
 if [ ! -f "$HOME/.autojump/etc/profile.d/autojump.sh" ]; then
 cd /tmp
