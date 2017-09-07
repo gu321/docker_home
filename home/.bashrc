@@ -22,7 +22,7 @@ HISTFILESIZE=200000
 
 export TERM='xterm-256color'
 export PS1="\[\e[33;1m\]\u \w \[\e[0m\]"
-export PATH=~/.py3env/bin:$PATH
+export PATH=~/.py3env/bin:/usr/local/bin:$PATH
 
 #if [ -f ~/.tmux_default ]; then
 #    ~/.tmux_default > /dev/null 2>&1 
