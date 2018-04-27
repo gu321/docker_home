@@ -29,3 +29,10 @@ export PATH=~/.py3env/bin:/usr/local/bin:$PATH
 #fi
 
 [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && source ~/.autojump/etc/profile.d/autojump.sh
+
+sync() {
+git add -u && git commit -m '.' ;
+local branch=`git branch 2> /dev/null | sed -e '/^[^*]/d' |awk -F' ' '{print $2}'`
+git pull origin $branch && git push origin $branch;
+}
+
